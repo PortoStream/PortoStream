@@ -426,17 +426,17 @@
     </footer>
 
     <script>
+        const TELEFONO = "593995235082";
+        
         function comprarPlan(servicio, detalles, precio) {
-            const numero = atob("NTkzOTk1MjM1MDgy");
             const mensaje = `¡Hola! Vengo de la página web.\nMe interesa adquirir el servicio de ${servicio} (${detalles}) por el precio de $${precio}.\n¿Me podría pasar los métodos de pago?`;
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            const url = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank', 'noopener,noreferrer');
         }
 
         function contactarWeb() {
-            const numero = atob("NTkzOTk1MjM1MDgy");
             const mensaje = `¡Hola! Vengo de la página web y deseo más información.`;
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            const url = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank', 'noopener,noreferrer');
         }
     </script>
