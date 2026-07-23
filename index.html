@@ -1,20 +1,27 @@
+html
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSP Seguro -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';">
+    
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <title>PortoStream | El Mejor Entretenimiento Premium</title>
     
     <!-- SEO & Theme -->
     <meta name="description" content="Disfruta de tus películas, series, música y herramientas de diseño favoritas con entrega inmediata y garantía total.">
     <meta name="theme-color" content="#0a0a0a">
 
-    <!-- Fonts: Outfit for a modern, geometric, premium look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (CDN for single-file deployment) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -97,11 +104,9 @@
     <nav class="fixed w-full z-50 glass-card border-b border-white/5 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Texto PortoStream con efecto glow estático -->
                 <div class="flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
                     <span class="font-black text-2xl tracking-tight text-white text-glow">Porto<span class="text-brand-prime">Stream</span></span>
                 </div>
-                <!-- Botón de Contacto General -->
                 <div>
                     <a href="https://wa.me/593995235082?text=¡Hola!%20Vengo%20de%20la%20página%20web%20y%20deseo%20más%20información." target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 overflow-hidden">
                         <span class="relative z-10 flex items-center gap-2">
@@ -143,7 +148,7 @@
                         <span class="bg-brand-netflix text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-netflix/40">Top Ventas</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" style="max-width: 120px; object-fit: contain;">
+                        <img src="netflix.svg" alt="Netflix" style="max-width: 120px; object-fit: contain;">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Netflix</h3>
@@ -163,7 +168,7 @@
                         <span class="bg-brand-disney text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-disney/40">1 Dispositivo</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney Plus" style="max-width: 120px; object-fit: contain; filter: brightness(0) invert(1) !important;">
+                        <img src="disney.svg" alt="Disney Plus" style="max-width: 120px; object-fit: contain; filter: brightness(0) invert(1) !important;">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Disney Plus</h3>
@@ -183,7 +188,7 @@
                         <span class="bg-brand-prime text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-prime/40">Cuenta Completa</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" style="max-width: 120px; object-fit: contain;">
+                        <img src="prime.svg" alt="Prime Video" style="max-width: 120px; object-fit: contain;">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Prime Video</h3>
@@ -203,7 +208,7 @@
                         <span class="bg-brand-spotify text-black text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-spotify/40">Cuenta Completa</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify" style="max-width: 120px; object-fit: contain;">
+                        <img src="spotify.svg" alt="Spotify" style="max-width: 120px; object-fit: contain;">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Spotify Premium</h3>
@@ -223,7 +228,7 @@
                         <span class="bg-brand-hbo text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-hbo/40">1 Dispositivo</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max" style="max-width: 120px; object-fit: contain; filter: brightness(0) invert(1) !important;">
+                        <img src="max.svg" alt="Max" style="max-width: 120px; object-fit: contain; filter: brightness(0) invert(1) !important;">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">HBO Max</h3>
@@ -243,11 +248,10 @@
                         <span class="bg-brand-canva text-black text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-canva/40">Cuenta Completa</span>
                     </div>
                     <div class="h-12 flex items-center mb-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/3840px-Canva_logo.svg.png" alt="Canva" style="max-width: 120px; object-fit: contain;">
+                        <img src="canva.svg" alt="Canva" style="max-width: 120px; object-fit: contain;">
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-5">Canva Pro</h3>
 
-                    <!-- Option 1: One Month -->
                     <div class="bg-black/40 rounded-2xl p-4 mb-4 border border-white/5 transition-colors group-hover:border-white/10">
                         <div class="flex justify-between items-center mb-3">
                             <div>
@@ -260,14 +264,11 @@
                         </div>
                     </div>
 
-                    <!-- Option 2: One Year (Highlighted) -->
                     <div class="relative bg-gradient-to-br from-brand-canva/10 to-blue-900/20 rounded-2xl p-5 pt-7 border-2 border-brand-canva shadow-[0_0_20px_rgba(0,196,204,0.15)] flex-grow flex flex-col justify-between overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-brand-canva/20 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
-                        
                         <div class="absolute top-2 left-1/2 transform -translate-x-1/2">
                             <span class="bg-gradient-to-r from-brand-canva to-blue-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Recomendado</span>
                         </div>
-                        
                         <div class="mt-3 mb-4">
                             <span class="block text-brand-canva text-sm font-bold uppercase tracking-wider mb-1">1 Año</span>
                             <div class="flex items-baseline gap-2">
@@ -275,7 +276,6 @@
                                 <span class="text-xs text-gray-400 line-through">$27</span>
                             </div>
                         </div>
-                        
                         <a href="https://wa.me/593995235082?text=¡Hola!%20Vengo%20de%20la%20página%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Canva%20Pro%20(Cuenta%20Completa)%20por%20el%20precio%20de%20$2.25.%0A¿Me%20podría%20pasar%20los%20métodos%20de%20pago?" target="_blank" rel="noopener noreferrer" class="relative w-full text-center bg-gradient-to-r from-brand-canva to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-canva/30 overflow-hidden group/btn">
                             <span class="relative z-10">La Mejor Oferta</span>
                         </a>
@@ -292,9 +292,7 @@
                 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 border border-yellow-500/20">
-                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Entrega Inmediata</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Recibe tus credenciales en minutos tras confirmar tu pago de forma segura vía WhatsApp.</p>
@@ -302,9 +300,7 @@
 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20">
-                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Garantía Total</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Tranquilidad absoluta. Soporte y garantía funcional durante todo el tiempo de tu suscripción contratada.</p>
@@ -312,12 +308,7 @@
 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-brand-prime/10 flex items-center justify-center mb-6 border border-brand-prime/20">
-                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 15h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 19l2 2"></path>
-                        </svg>
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v-3a8 8 0 0 1 16 0v3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 15h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 19l2 2"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Soporte 24/7</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Atención personalizada en cualquier momento para resolver tus dudas y ayudarte con tu servicio.</p>
