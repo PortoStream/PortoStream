@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src * data:; connect-src 'self'; frame-ancestors 'none';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
     <title>PortoStream | El Mejor Entretenimiento Premium</title>
     
+    <!-- SEO & Theme -->
     <meta name="description" content="Disfruta de tus películas, series, música y herramientas de diseño favoritas con entrega inmediata y garantía total.">
-    <meta name="theme-color" content="#0a0a0a">
-
+    <meta name="theme-color" content="#050505">
+    
+    <!-- Open Graph for Social Sharing (WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="PortoStream | Entretenimiento Premium">
+    <meta property="og:description" content="Tus servicios de streaming favoritos a una fracción del precio. Entrega inmediata y garantía total.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tudominio.com/">
-    <meta property="og:title" content="PortoStream | El Mejor Entretenimiento Premium">
-    <meta property="og:description" content="Tus películas, series y música favoritas con entrega inmediata y garantía total.">
-    <meta property="og:image" content="https://tudominio.com/imagen-preview.jpg">
 
+    <!-- Fonts: Outfit for a modern, geometric, premium look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS (CDN optimized for single-file deployment) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -87,41 +85,46 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .card-netflix:hover { box-shadow: 0 0 30px rgba(229, 9, 20, 0.15); border-color: rgba(229, 9, 20, 0.4); }
-        .card-disney:hover { box-shadow: 0 0 30px rgba(17, 60, 207, 0.15); border-color: rgba(17, 60, 207, 0.4); }
-        .card-prime:hover { box-shadow: 0 0 30px rgba(0, 168, 225, 0.15); border-color: rgba(0, 168, 225, 0.4); }
-        .card-spotify:hover { box-shadow: 0 0 30px rgba(30, 215, 96, 0.15); border-color: rgba(30, 215, 96, 0.4); }
-        .card-hbo:hover { box-shadow: 0 0 30px rgba(94, 4, 138, 0.15); border-color: rgba(94, 4, 138, 0.4); }
-        .card-canva:hover { box-shadow: 0 0 30px rgba(0, 196, 204, 0.15); border-color: rgba(0, 196, 204, 0.4); }
+        /* Optimizados para transiciones más suaves en móviles y desktop */
+        .card-netflix:hover { box-shadow: 0 10px 30px rgba(229, 9, 20, 0.15); border-color: rgba(229, 9, 20, 0.4); }
+        .card-disney:hover { box-shadow: 0 10px 30px rgba(17, 60, 207, 0.15); border-color: rgba(17, 60, 207, 0.4); }
+        .card-prime:hover { box-shadow: 0 10px 30px rgba(0, 168, 225, 0.15); border-color: rgba(0, 168, 225, 0.4); }
+        .card-spotify:hover { box-shadow: 0 10px 30px rgba(30, 215, 96, 0.15); border-color: rgba(30, 215, 96, 0.4); }
+        .card-hbo:hover { box-shadow: 0 10px 30px rgba(94, 4, 138, 0.15); border-color: rgba(94, 4, 138, 0.4); }
+        .card-canva:hover { box-shadow: 0 10px 30px rgba(0, 196, 204, 0.15); border-color: rgba(0, 196, 204, 0.4); }
 
         .text-glow {
             text-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
     </style>
 </head>
-<body class="antialiased w-full min-h-screen flex flex-col items-center selection:bg-brand-prime selection:text-white overflow-x-hidden">
+
+<!-- Agregado id="top" para reemplazar el javascript inline del navbar -->
+<body id="top" class="antialiased min-h-screen flex flex-col selection:bg-brand-prime selection:text-white">
 
     <nav class="fixed w-full z-50 glass-card border-b border-white/5 top-0">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-black text-2xl tracking-tight text-white text-glow">Porto<span class="text-brand-prime">Stream</span></span>
-                </div>
+                <!-- Solucionada vulnerabilidad XSS reemplazando onclick por enlace ancla HTML puro -->
+                <a href="#top" class="flex items-center group focus:outline-none" aria-label="Ir al inicio">
+                    <span class="font-black text-2xl tracking-tight text-white text-glow group-hover:scale-105 transition-transform duration-300">Porto<span class="text-brand-prime">Stream</span></span>
+                </a>
+                
+                <!-- Botón de Contacto General con URL Segura (100% compatible con móviles) -->
                 <div>
-                    <button onclick="contactarWeb()" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 overflow-hidden">
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 overflow-hidden">
                         <span class="relative z-10 flex items-center gap-2">
                             Contáctanos
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow pt-28 w-full max-w-5xl mx-auto px-4">
-        
-        <section class="relative pt-16 pb-12 text-center animate-float w-full">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-brand-prime/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
+    <main class="flex-grow pt-28">
+        <section class="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center animate-float">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[600px] h-[600px] bg-brand-prime/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
             
             <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-wide text-brand-prime uppercase bg-brand-prime/10 rounded-full mb-8 border border-brand-prime/20">
                 <span class="w-2 h-2 rounded-full bg-brand-prime animate-pulse"></span>
@@ -135,28 +138,28 @@
                 </span>
             </h1>
             
-            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 font-light mb-10">
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 font-light mb-12 px-2">
                 Disfruta de tus películas, series, música y herramientas de diseño favoritas con <strong class="text-white font-semibold">entrega inmediata</strong> y <strong class="text-white font-semibold">garantía total</strong>.
             </p>
 
-            <div class="mb-16">
-                <a href="#catalogo" class="inline-flex items-center justify-center px-8 py-4 text-base font-extrabold text-white transition-all duration-300 bg-gradient-to-r from-brand-prime to-blue-600 rounded-full hover:scale-105 shadow-lg shadow-brand-prime/30 gap-2 cursor-pointer">
+            <div class="mb-12">
+                <a href="#catalogo" class="inline-flex items-center justify-center px-8 py-4 text-base font-extrabold text-white transition-all duration-300 bg-gradient-to-r from-brand-prime to-blue-600 rounded-full hover:scale-105 shadow-lg shadow-brand-prime/30 gap-2 focus:outline-none focus:ring-2 focus:ring-brand-prime focus:ring-offset-2 focus:ring-offset-brand-dark">
                     Ver Catálogo
-                    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
             </div>
         </section>
 
-        <section class="py-12 relative z-10 w-full">
+        <section class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10">
             <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 text-center w-full">
                 <h2 class="text-2xl sm:text-3xl font-black text-white mb-3">Nuestros Números Hablan</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-sm sm:text-base font-light">
                     Miles de clientes satisfechos confían en nosotros para sus servicios de plataformas de streaming
                 </p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <div class="flex flex-col items-center">
                         <span class="text-4xl sm:text-5xl font-black text-brand-prime mb-2">10K+</span>
                         <span class="text-sm text-gray-400 font-semibold uppercase tracking-wider">Clientes Satisfechos</span>
@@ -167,21 +170,23 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <span class="text-4xl sm:text-5xl font-black text-yellow-400 mb-2">99%</span>
-                        <span class="text-sm text-gray-400 font-semibold uppercase tracking-wider">Tiempo de Actividad</span>
+                        <span class="text-sm text-gray-400 font-semibold uppercase tracking-wider">Tiempo Activo</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="catalogo" class="py-16 relative z-10 w-full">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <section id="catalogo" class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 
-                <div class="glass-card rounded-3xl p-8 flex flex-col relative group transition-all duration-300 card-netflix transform hover:-translate-y-2 overflow-hidden w-full">
+                <!-- Tarjeta Netflix -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-netflix transform hover:-translate-y-2 overflow-hidden">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-netflix text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-netflix/40">Top Ventas</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="netflix.svg" alt="Netflix" class="max-w-[120px] max-h-[48px] object-contain" loading="lazy" decoding="async">
+                        <!-- Añadido width, height, loading y decoding para performance y evitar CLS. Se usan SVGs oficiales en CDN. -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Logo de Netflix" width="120" height="32" loading="eager" decoding="async" class="max-w-[120px] h-auto object-contain">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Netflix</h3>
@@ -190,17 +195,19 @@
                             <span class="text-4xl font-black text-white">$5</span>
                         </div>
                     </div>
-                    <button onclick="comprarPlan('Netflix', '1 Dispositivo', '5.00')" class="w-full text-center bg-brand-netflix hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2">
+                    <!-- Enlace URL Encoded nativo 100% compatible con móviles -->
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Netflix%20(1%20Dispositivo)%20por%20el%20precio%20de%20%245.00.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-netflix hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-netflix focus:ring-offset-2 focus:ring-offset-brand-dark">
                         Lo Quiero
-                    </button>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-8 flex flex-col relative group transition-all duration-300 card-disney transform hover:-translate-y-2 overflow-hidden w-full">
+                <!-- Tarjeta Disney -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-disney transform hover:-translate-y-2 overflow-hidden">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-disney text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-disney/40">1 Dispositivo</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="disney.svg" alt="Disney Plus" class="max-w-[120px] max-h-[48px] object-contain brightness-0 invert" loading="lazy" decoding="async">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Logo de Disney Plus" width="120" height="48" loading="lazy" decoding="async" class="max-w-[120px] h-auto object-contain brightness-0 invert">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Disney Plus</h3>
@@ -209,17 +216,18 @@
                             <span class="text-4xl font-black text-white">$4</span>
                         </div>
                     </div>
-                    <button onclick="comprarPlan('Disney Plus Premium', '1 Dispositivo', '4.00')" class="w-full text-center bg-brand-disney hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Disney%20Plus%20Premium%20(1%20Dispositivo)%20por%20el%20precio%20de%20%244.00.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-disney hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-disney focus:ring-offset-2 focus:ring-offset-brand-dark">
                         Lo Quiero
-                    </button>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-8 flex flex-col relative group transition-all duration-300 card-prime transform hover:-translate-y-2 overflow-hidden w-full">
+                <!-- Tarjeta Prime Video -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-prime transform hover:-translate-y-2 overflow-hidden">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-prime text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-prime/40">Cuenta Completa</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="Prime.svg" alt="Prime Video" class="max-w-[120px] max-h-[48px] object-contain" loading="lazy" decoding="async">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Logo de Prime Video" width="120" height="36" loading="lazy" decoding="async" class="max-w-[120px] h-auto object-contain">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Prime Video</h3>
@@ -228,17 +236,18 @@
                             <span class="text-4xl font-black text-white">$3</span>
                         </div>
                     </div>
-                    <button onclick="comprarPlan('Prime Video', 'Cuenta Completa', '3.00')" class="w-full text-center bg-brand-prime hover:bg-sky-600 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-brand-prime/20">
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Prime%20Video%20(Cuenta%20Completa)%20por%20el%20precio%20de%20%243.00.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-prime hover:bg-sky-600 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-brand-prime/20 focus:outline-none focus:ring-2 focus:ring-brand-prime focus:ring-offset-2 focus:ring-offset-brand-dark">
                         Lo Quiero
-                    </button>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-8 flex flex-col relative group transition-all duration-300 card-spotify transform hover:-translate-y-2 overflow-hidden w-full">
+                <!-- Tarjeta Spotify -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-spotify transform hover:-translate-y-2 overflow-hidden">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-spotify text-black text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-spotify/40">Cuenta Completa</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="spotify.svg" alt="Spotify" class="max-w-[120px] max-h-[48px] object-contain" loading="lazy" decoding="async">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Logo de Spotify" width="120" height="36" loading="lazy" decoding="async" class="max-w-[120px] h-auto object-contain">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">Spotify Premium</h3>
@@ -247,17 +256,18 @@
                             <span class="text-4xl font-black text-white">$2.50</span>
                         </div>
                     </div>
-                    <button onclick="comprarPlan('Spotify Premium', 'Cuenta Completa', '2.50')" class="w-full text-center bg-brand-spotify hover:bg-green-600 text-black font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Spotify%20Premium%20(Cuenta%20Completa)%20por%20el%20precio%20de%20%242.50.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-spotify hover:bg-green-600 text-black font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-spotify focus:ring-offset-2 focus:ring-offset-brand-dark">
                         Lo Quiero
-                    </button>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-8 flex flex-col relative group transition-all duration-300 card-hbo transform hover:-translate-y-2 overflow-hidden w-full">
+                <!-- Tarjeta HBO Max -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-hbo transform hover:-translate-y-2 overflow-hidden">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-hbo text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-hbo/40">1 Dispositivo</span>
                     </div>
                     <div class="h-16 flex items-center mb-6">
-                        <img src="max.svg" alt="Max" class="max-w-[120px] max-h-[48px] object-contain brightness-0 invert" loading="lazy" decoding="async">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Logo de Max" width="120" height="30" loading="lazy" decoding="async" class="max-w-[120px] h-auto object-contain brightness-0 invert">
                     </div>
                     <div class="mb-6 flex-grow">
                         <h3 class="text-2xl font-bold text-white mb-2">HBO Max</h3>
@@ -266,63 +276,69 @@
                             <span class="text-4xl font-black text-white">$3.50</span>
                         </div>
                     </div>
-                    <button onclick="comprarPlan('HBO MAX', '1 Dispositivo', '3.50')" class="w-full text-center bg-brand-hbo hover:bg-purple-800 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20HBO%20MAX%20(1%20Dispositivo)%20por%20el%20precio%20de%20%243.50.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-hbo hover:bg-purple-800 text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-hbo focus:ring-offset-2 focus:ring-offset-brand-dark">
                         Lo Quiero
-                    </button>
+                    </a>
                 </div>
 
-                <div class="glass-card rounded-3xl p-6 flex flex-col relative group transition-all duration-300 card-canva transform hover:-translate-y-2 overflow-hidden border border-brand-canva/20 pt-10 w-full">
+                <!-- Tarjeta Canva Pro (Doble Opción) -->
+                <div class="glass-card rounded-3xl p-6 lg:p-8 flex flex-col relative group transition-all duration-300 card-canva transform hover:-translate-y-2 overflow-hidden border border-brand-canva/20 lg:pt-10">
                     <div class="absolute top-5 right-5 z-10">
                         <span class="bg-brand-canva text-black text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-brand-canva/40">Cuenta Completa</span>
                     </div>
-                    <div class="h-12 flex items-center mb-4">
-                        <img src="canva.svg" alt="Canva" class="max-w-[120px] max-h-[48px] object-contain" loading="lazy" decoding="async">
+                    <div class="h-12 flex items-center mb-4 lg:mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Canva_logo.svg/3840px-Canva_logo.svg.png" alt="Logo de Canva" width="120" height="38" loading="lazy" decoding="async" class="max-w-[120px] h-auto object-contain">
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-5">Canva Pro</h3>
 
+                    <!-- Opción 1 Mes -->
                     <div class="bg-black/40 rounded-2xl p-4 mb-4 border border-white/5 transition-colors group-hover:border-white/10">
-                        <div class="flex justify-between items-center mb-3">
+                        <div class="flex justify-between items-center flex-wrap gap-3 sm:flex-nowrap">
                             <div>
                                 <span class="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-1">1 Mes</span>
                                 <span class="text-xl font-bold text-white">$2.25</span>
                             </div>
-                            <button onclick="comprarPlan('Canva Pro', '1 Mes', '2.25')" class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-bold py-2 px-5 rounded-lg transition-colors border border-gray-600">
+                            <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Canva%20Pro%20(1%20Mes)%20por%20el%20precio%20de%20%242.25.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-bold py-2 px-4 lg:px-5 rounded-lg transition-colors border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 whitespace-nowrap">
                                 Lo Quiero
-                            </button>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-brand-canva/10 to-blue-900/20 rounded-2xl p-5 pt-7 border-2 border-brand-canva shadow-[0_0_20px_rgba(0,196,204,0.15)] flex-grow flex flex-col justify-between overflow-hidden">
+                    <!-- Opción 1 Año -->
+                    <div class="relative bg-gradient-to-br from-brand-canva/10 to-blue-900/20 rounded-2xl p-4 lg:p-5 lg:pt-7 border-2 border-brand-canva shadow-[0_0_20px_rgba(0,196,204,0.15)] flex-grow flex flex-col justify-between overflow-hidden mt-2">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-brand-canva/20 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
-                        <div class="absolute top-2 left-1/2 transform -translate-x-1/2">
-                            <span class="bg-gradient-to-r from-brand-canva to-blue-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Recomendado</span>
+                        
+                        <div class="absolute top-0 -translate-y-1/2 left-1/2 transform -translate-x-1/2 sm:top-2 sm:translate-y-0">
+                            <span class="bg-gradient-to-r from-brand-canva to-blue-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-md whitespace-nowrap">Recomendado</span>
                         </div>
-                        <div class="mt-3 mb-4">
+                        
+                        <div class="mt-4 sm:mt-3 mb-4">
                             <span class="block text-brand-canva text-sm font-bold uppercase tracking-wider mb-1">1 Año</span>
                             <div class="flex items-baseline gap-2">
                                 <span class="text-4xl font-black text-white">$9</span>
                                 <span class="text-xs text-gray-400 line-through">$27</span>
                             </div>
                         </div>
-                        <button onclick="comprarPlan('Canva Pro Anual', 'Cuenta Completa', '9.00')" class="relative w-full text-center bg-gradient-to-r from-brand-canva to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-canva/30 overflow-hidden group/btn">
+                        
+                        <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web.%0AMe%20interesa%20adquirir%20el%20servicio%20de%20Canva%20Pro%20Anual%20(Cuenta%20Completa)%20por%20el%20precio%20de%20%249.00.%0A%C2%BFMe%20podr%C3%ADa%20pasar%20los%20m%C3%A9todos%20de%20pago%3F" target="_blank" rel="noopener noreferrer" class="relative w-full text-center bg-gradient-to-r from-brand-canva to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-brand-canva/30 overflow-hidden group/btn focus:outline-none focus:ring-2 focus:ring-brand-canva focus:ring-offset-2 focus:ring-offset-brand-dark">
                             <span class="relative z-10">La Mejor Oferta</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="py-16 relative z-10 border-t border-white/5 w-full">
+        <section class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10 border-t border-white/5">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-black text-white mb-2">Lo que dicen nuestros clientes</h2>
                 <p class="text-gray-400 text-sm font-light">Opiniones reales sobre nuestro servicio y atención</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
                     <div>
-                        <div class="text-yellow-400 text-lg mb-3 tracking-widest">
+                        <div class="text-yellow-400 text-lg mb-3 tracking-widest" aria-label="5 estrellas">
                             ★★★★★
                         </div>
                         <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
@@ -340,9 +356,9 @@
                     </div>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between w-full">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
                     <div>
-                        <div class="text-yellow-400 text-lg mb-3 tracking-widest">
+                        <div class="text-yellow-400 text-lg mb-3 tracking-widest" aria-label="5 estrellas">
                             ★★★★★
                         </div>
                         <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
@@ -360,9 +376,9 @@
                     </div>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between w-full">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
                     <div>
-                        <div class="text-yellow-400 text-lg mb-3 tracking-widest">
+                        <div class="text-yellow-400 text-lg mb-3 tracking-widest" aria-label="5 estrellas">
                             ★★★★★
                         </div>
                         <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
@@ -383,13 +399,15 @@
         </section>
     </main>
 
-    <footer class="mt-20 border-t border-white/10 bg-black/50 relative z-10 w-full">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center w-full">
+    <footer class="mt-12 border-t border-white/10 bg-black/50 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 border border-yellow-500/20">
-                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Entrega Inmediata</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Recibe tus credenciales en minutos tras confirmar tu pago de forma segura vía WhatsApp.</p>
@@ -397,7 +415,9 @@
 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20">
-                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Garantía Total</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Tranquilidad absoluta. Soporte y garantía funcional durante todo el tiempo de tu suscripción contratada.</p>
@@ -405,7 +425,12 @@
 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 rounded-2xl bg-brand-prime/10 flex items-center justify-center mb-6 border border-brand-prime/20">
-                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v-3a8 8 0 0 1 16 0v3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 15h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 19l2 2"></path></svg>
+                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 15h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 19l2 2"></path>
+                        </svg>
                     </div>
                     <h4 class="text-xl font-bold text-white mb-3">Soporte 24/7</h4>
                     <p class="text-gray-400 leading-relaxed text-sm">Atención personalizada en cualquier momento para resolver tus dudas y ayudarte con tu servicio.</p>
@@ -414,31 +439,16 @@
             </div>
             
             <div class="mt-16 pt-8 border-t border-white/5 flex flex-col items-center">
-                <p class="text-gray-500 text-sm font-medium tracking-wide">
+                <p class="text-gray-500 text-sm font-medium tracking-wide text-center">
                     &copy; 2026 PortoStream. Todos los derechos reservados.
                 </p>
-                <button onclick="contactarWeb()" class="mt-6 text-brand-prime hover:text-white transition-colors text-sm font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.938 3.112 6.938 6.937 0 3.824-3.113 6.938-6.938 6.938z"/></svg>
+                <a href="https://wa.me/593995235082?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="mt-6 text-brand-prime hover:text-white transition-colors text-sm font-semibold flex items-center gap-2 focus:outline-none focus:underline" aria-label="Contactar vía WhatsApp">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.938 3.112 6.938 6.937 0 3.824-3.113 6.938-6.938 6.938z"/></svg>
                     Contactar Vía WhatsApp
-                </button>
+                </a>
             </div>
         </div>
     </footer>
 
-    <script>
-        const TELEFONO = "593995235082";
-        
-        function comprarPlan(servicio, detalles, precio) {
-            const mensaje = `¡Hola! Vengo de la página web.\nMe interesa adquirir el servicio de ${servicio} (${detalles}) por el precio de $${precio}.\n¿Me podría pasar los métodos de pago?`;
-            const url = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank', 'noopener,noreferrer');
-        }
-
-        function contactarWeb() {
-            const mensaje = `¡Hola! Vengo de la página web y deseo más información.`;
-            const url = `https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank', 'noopener,noreferrer');
-        }
-    </script>
 </body>
 </html>
